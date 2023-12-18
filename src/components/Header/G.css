@@ -1,0 +1,24 @@
+/* CSS */
+@keyframes flipIn {
+    0% {
+        opacity: 0;
+        transform: perspective(400px) rotateY(90deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: perspective(400px) rotateY(0deg);
+    }
+}
+
+.dropdown-content {
+    opacity: 0;
+    transform: perspective(400px) rotateY(90deg);
+    transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    display: none;
+}
+
+.dropdown-content.active {
+    display: block;
+    animation: flipIn 0.5s ease forwards;
+}

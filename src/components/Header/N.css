@@ -1,0 +1,19 @@
+.dropdown-content {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation-fill-mode: forwards;
+    display: none;
+}
+
+.dropdown-content.active {
+    display: block;
+    animation-name: slideDown;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+}
+
+.dropdown-content.inactive {
+    animation-name: slideUp;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+}
